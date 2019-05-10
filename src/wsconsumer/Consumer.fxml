@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="536.0" prefWidth="780.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="wsconsumer.ConsumerController">
+  <center>
+    <TableView fx:id="tableViewProdutos" editable="false" pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0" styleClass="content-section" tableMenuButtonVisible="false">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="71.0" text="ID" fx:id="tableColumnId" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="420.0" resizable="true" text="Nome" fx:id="tableColumnNome" />
+      </columns>
+    </TableView>
+  </center>
+  <left>
+    <VBox prefHeight="328.0" prefWidth="204.0" style="-fx-background-color:#333;" styleClass="sidebar-section">
+      <children>
+        <Label alignment="CENTER" prefHeight="22.0" prefWidth="322.0" text="N. Registros" textFill="WHITE" visible="true">
+          <font>
+            <Font name="Raleway Light" size="24.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblTotal" alignment="CENTER" prefHeight="131.0" prefWidth="354.0" text="0" textFill="WHITE">
+          <font>
+            <Font name="Raleway" size="12.0" />
+          </font>
+        </Label>
+      </children>
+    </VBox>
+  </left>
+  <stylesheets>
+    <URL value="@consumer.css" />
+  </stylesheets>
+  <top>
+    <BorderPane prefHeight="86.0" prefWidth="780.0" styleClass="header-section">
+      <left>
+        <Label id="header-text" prefHeight="62.0" prefWidth="-1.0" text="Consumo de WebService">
+          <font>
+            <Font name="Raleway" size="36.0" />
+          </font>
+        </Label>
+      </left>
+      <right>
+        <Button fx:id="btnListar" mnemonicParsing="false" onAction="#btnListarClick" prefHeight="62.0" prefWidth="-1.0" text="Listar Produtos">
+          <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@report.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+      </right>
+    </BorderPane>
+  </top>
+</BorderPane>
